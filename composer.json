@@ -1,0 +1,46 @@
+{
+    "name": "api-contactabilidad-service/app",
+    "description": "Plantillas para generar componentes",
+    "basename": "api-contactabilidad-service",
+    "type": "project",
+    "minimum-stability": "dev",
+    "scripts": {
+        "make:api": "php tools/artisan c",
+        "make": "php tools/artisan c"
+    },
+    "require": {
+        "firebase/php-jwt": "dev-main",
+        "slim/psr7": "1.6.x-dev",
+        "neomerx/cors-psr7": "^2.0",
+        "egulias/email-validator": "3.x-dev",
+        "illuminate/validation": "5.7.x-dev",
+        "rbdwllr/reallysimplejwt": "4.x-dev",
+        "mercadopago/dx-php": "^2.6",
+        "phpmailer/phpmailer": "dev-master",
+        "vlucas/phpdotenv": "^5.6@dev",
+        "klein/klein": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/api",
+            "Trm\\": "app/api/movimientos",
+            "DB\\": "app/database",
+            "Cmd\\": "app/cmd",
+            "Mnt\\": "app/api",
+            "Mvt\\": "app/api",
+            "Sv\\": "app/endpoints"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "kylekatarnls/update-helper": true
+        }
+    },
+    "require-dev": {
+        "twig/twig": "3.x-dev",
+        "symfony/console": "5.4.x-dev",
+        "symfony/contracts": "2.5.x-dev",
+        "symfony/process": "5.4.x-dev",
+        "symfony/http-foundation": "4.4.x-dev"
+    }
+}
